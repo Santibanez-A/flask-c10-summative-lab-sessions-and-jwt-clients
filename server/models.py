@@ -9,7 +9,7 @@ class User(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, nullable=False, unique=True)
-    _password_hash = db.Column(db.String, nullable=True)
+    _password_hash = db.Column(db.String, nullable=False)
 
     tasks = db.relationship(
         "Task",
